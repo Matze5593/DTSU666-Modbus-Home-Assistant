@@ -1,0 +1,197 @@
+  # Zähler Standort -------  DTSU666_EG     
+modbus:
+  - name: DTSU666_EG
+    type: tcp
+    host: 192.168.178.88
+    port: 502
+    retry_on_empty: true
+    retries: 10
+    #close_comm_on_error: true
+    delay: 5
+    # timeout: 5
+    sensors:
+      - name: DTSU666_EG_L1_V
+        unique_id: DTSU666_EG_L1_V
+        input_type: holding
+        slave: 254
+        address: 97
+        unit_of_measurement: V
+        device_class: Voltage
+        scale: 0.1
+        state_class: measurement
+        data_type: uint16
+        count: 1
+        scan_interval: 100
+        swap: none
+            
+      - name: DTSU666_EG_L2_V
+        unique_id: DTSU666_EG_L2_V
+        input_type: holding
+        slave: 254
+        address: 98
+        unit_of_measurement: V
+        device_class: Voltage
+        scale: 0.1
+        state_class: measurement
+        data_type: uint16
+        count: 1
+        scan_interval: 100
+        swap: none
+      
+      - name: DTSU666_EG_L3_V
+        unique_id: DTSU666_EG_L3_V
+        input_type: holding
+        slave: 254
+        address: 99
+        unit_of_measurement: V
+        device_class: Voltage
+        scale: 0.1
+        state_class: measurement
+        data_type: uint16
+        count: 1
+        scan_interval: 100
+        swap: none
+      
+      - name: DTSU666_EG_L1_A
+        unique_id: DTSU666_EG_L1_A
+        input_type: holding
+        slave: 254
+        address: 100
+        unit_of_measurement: A
+        device_class: Current
+        scale: 0.01
+        state_class: measurement
+        data_type: uint16
+        count: 1
+        scan_interval: 10
+        swap: none
+      
+      - name: DTSU666_EG_L2_A
+        unique_id: DTSU666_EG_L2_A
+        input_type: holding
+        slave: 254
+        address: 101
+        unit_of_measurement: A
+        device_class: Current
+        scale: 0.01
+        state_class: measurement
+        data_type: uint16
+        count: 1
+        scan_interval: 10
+        swap: none
+
+      - name: DTSU666_EG_L3_A
+        unique_id: DTSU666_EG_L3_A
+        input_type: holding
+        slave: 254
+        address: 102
+        unit_of_measurement: A
+        device_class: Current
+        scale: 0.01
+        state_class: measurement
+        data_type: uint16
+        count: 1
+        scan_interval: 10
+        swap: none
+      
+      - name: DTSU666_EG_frequenz
+        unique_id: DTSU666_EG_frequenz
+        input_type: holding
+        slave: 254
+        address: 119
+        unit_of_measurement: Hz
+        device_class: frequency
+        scale: 0.01
+        state_class: measurement
+        data_type: uint16
+        count: 1
+        scan_interval: 100
+        swap: none
+    
+      - name: DTSU666_EG_activ_power_L1
+        unique_id: DTSU666_EG_activ_power_L1
+        input_type: holding
+        slave: 254
+        address: 356
+        unit_of_measurement: W
+        scale: 0.001
+        device_class: power
+        state_class: measurement
+        data_type: uint16
+        count: 1
+        precision: 0
+        scan_interval: 10
+        swap: none
+      
+      - name: DTSU666_EG_activ_power_L2
+        unique_id: DTSU666_EG_activ_power_L2
+        input_type: holding
+        slave: 254
+        address: 357
+        unit_of_measurement: W
+        device_class: power
+        scale: 0.001
+        state_class: measurement
+        data_type: uint16
+        count: 1
+        precision: 0
+        scan_interval: 10
+        swap: none
+
+      - name: DTSU666_EG_activ_power_L3
+        unique_id: DTSU666_EG_activ_power_L3
+        input_type: holding
+        slave: 254
+        address: 358
+        unit_of_measurement: W
+        device_class: power
+        scale: 0.01
+        state_class: measurement
+        data_type: uint16
+        count: 1
+        scan_interval: 10
+        swap: none
+      
+      - name: DTSU666_EG_wirkleistung1
+        unique_id: DTSU666_EG_wirkleistung_summe1
+        input_type: holding
+        slave: 254
+        address: 363
+        unit_of_measurement: W
+        device_class: power
+        scale: 0.01
+        state_class: measurement
+        data_type: uint16
+        count: 1
+        scan_interval: 10
+        precision: 0
+        swap: none
+
+      - name: DTSU666_EG_wirkleistung2
+        unique_id: DTSU666_EG_wirkleistung_summe2
+        input_type: holding
+        slave: 254
+        address: 362
+        unit_of_measurement: W
+        device_class: power
+        scale: 0.01
+        state_class: measurement
+        data_type: uint16
+        count: 1
+        scan_interval: 10
+        precision: 0
+        swap: none
+      
+      - name: DTSU666_EG_wirkarbeit
+        unique_id: DTSU666_EG_wirkarbeit
+        input_type: holding
+        slave: 254
+        address: 1
+        unit_of_measurement: kWh
+        device_class: energy
+        scale: 0.1
+        state_class: total_increasing
+        data_type: uint16
+        count: 1
+        scan_interval: 100
+        swap: none
